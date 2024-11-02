@@ -75,7 +75,6 @@
 
 text = input()
 text = text.upper()
-print(type(text))
 res = 0
 dict1 = {'А': 1, 'В': 1, 'Е': 1, 'И': 1, 'Н': 1, 'О': 1, 'Р': 1, 'С': 1, 'Т': 1,
         'Д': 2, 'К': 2, 'Л': 2, 'М': 2, 'П': 2, 'У': 1, 
@@ -86,12 +85,10 @@ dict1 = {'А': 1, 'В': 1, 'Е': 1, 'И': 1, 'Н': 1, 'О': 1, 'Р': 1, 'С': 1,
         'Ф': 10, 'Щ': 10, 'Ъ': 10}
 
 for item in dict1:
-    for i in range(0, len(text) - 1):
-        if item in text:
-            print(text)
+    for i in text:
+        if item == i:
             res = res + dict1.get(item)
-            text = text.replace(text[i], "")
-            # print(dict1.get(item))
+            print(dict1.get(item))
 print(res)
 
 
